@@ -13,60 +13,40 @@ public class User implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String prenom;
-    private int age;
-    private String nom;
-    private String mail;
+    private String username;
+    private String password;
 
     public User() {
         super();
     }
 
-    public User(String prenom, int age, String nom, String mail) {
+    public User(String username, String password) {
         super();
-        this.prenom = prenom;
-        this.age = age;
-        this.nom = nom;
-        this.mail = mail;
+        this.username = username;
+        this.password = password;
     }
 
     public Long getId() {
         return id;
     }
 
-    public String getPrenom() {
-        return prenom;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public String getNom() {
-        return nom;
-    }
-
-    public String getMail() {
-        return mail;
-    }
-
     public void setId(Long id) {
         this.id = id;
     }
 
-    public void setPrenom(String prenom) {
-        this.prenom = prenom;
+    public String getUsername() {
+        return username;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public void setNom(String nom) {
-        this.nom = nom;
+    public String getPassword() {
+        return password;
     }
 
-    public void setMail(String mail) {
-        this.mail = mail;
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
