@@ -27,6 +27,12 @@ public class UserResource {
     @Autowired
     private ToDoRepository todoRepository;
 
+    /**
+     * It takes a user object, saves it to the database, and returns the saved user object
+     * 
+     * @param user The user object that is being passed in the request body.
+     * @return The user object is being returned.
+     */
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
@@ -34,6 +40,11 @@ public class UserResource {
         return userRepository.save(user);
     }
 
+    /**
+     * It returns all the users in the database
+     * 
+     * @return An Iterable of User objects.
+     */
     @GET
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
@@ -41,6 +52,12 @@ public class UserResource {
         return userRepository.findAll();
     }
 
+    /**
+     * It takes a Long id as a path parameter, and returns a User object
+     * 
+     * @param id The id of the user to be read
+     * @return User
+     */
     @Path("{id}")
     @GET
     @Consumes(MediaType.APPLICATION_JSON)
@@ -49,6 +66,11 @@ public class UserResource {
         return userRepository.findById(id);
     }
 
+    /**
+     * It deletes a user from the database by id
+     * 
+     * @param id The id of the user to be deleted.
+     */
     @Path("{id}")
     @DELETE
     @Consumes(MediaType.APPLICATION_JSON)
@@ -56,6 +78,14 @@ public class UserResource {
         userRepository.deleteById(id);
     }
 
+    /**
+     * It takes a user id and a todo object, finds the user by id, sets the user on the todo object,
+     * and then saves the todo object
+     * 
+     * @param id The id of the user
+     * @param todo The ToDo object that is being created.
+     * @return A ToDo object
+     */
     @POST
     @Path("{id}/todos")
     @Consumes(MediaType.APPLICATION_JSON)
@@ -66,6 +96,13 @@ public class UserResource {
         return todoRepository.save(todo);
     }
     
+    /**
+     * It returns a list of ToDo objects that are associated with the user whose id is passed in as a
+     * parameter
+     * 
+     * @param id The id of the user
+     * @return A list of ToDo objects
+     */
     @GET
     @Path("{id}/todos")
     @Produces(MediaType.APPLICATION_JSON)
