@@ -7,11 +7,11 @@
 		<version>2.6.7</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>aimtrainer</groupId>
-	<artifactId>aim-trainer-services</artifactId>
+	<groupId>todosite</groupId>
+	<artifactId>to-do-services</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>aim-trainer-services</name>
-	<description>Aim trainer services project for Spring Boot</description>
+	<name>to-do-services</name>
+	<description>To Do services project for Spring Boot</description>
 	<properties>
 		<java.version>18</java.version>
 	</properties>

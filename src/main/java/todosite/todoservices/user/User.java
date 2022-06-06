@@ -1,4 +1,4 @@
-package aimtrainer.aimtrainerservices;
+package todosite.todoservices.user;
 
 import java.io.Serializable;
 
@@ -9,9 +9,8 @@ import javax.persistence.Id;
 
 @Entity
 public class User implements Serializable {
-    private static final long serialVersionUID = -8537962680206576813L;
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private String username;
