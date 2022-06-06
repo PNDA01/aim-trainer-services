@@ -21,7 +21,8 @@ public class ToDoResource {
     private ToDoRepository todoRepository;
 
     /**
-     * This function takes a ToDo object as input, saves it to the database, and returns the saved ToDo
+     * This function takes a ToDo object as input, saves it to the database, and
+     * returns the saved ToDo
      * object
      * 
      * @param todo The ToDo object that is being passed in the request body.
@@ -34,11 +35,11 @@ public class ToDoResource {
         return todoRepository.save(todo);
     }
 
-   /**
-    * This function returns all the todos in the database.
-    * 
-    * @return An Iterable of ToDo objects.
-    */
+    /**
+     * This function returns all the todos in the database.
+     * 
+     * @return An Iterable of ToDo objects.
+     */
     @GET
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
@@ -47,7 +48,8 @@ public class ToDoResource {
     }
 
     /**
-     * It takes a Long id as a path parameter, and returns an Optional of a ToDo object
+     * It takes a Long id as a path parameter, and returns an Optional of a ToDo
+     * object
      * 
      * @param id The id of the ToDo item to be retrieved.
      * @return An Optional object.
@@ -61,8 +63,8 @@ public class ToDoResource {
     }
 
     /**
-     * The function takes the id of the todo item to be deleted as a path parameter and deletes the
-     * todo item from the database
+     * The function takes the id of the todo item to be deleted as a path parameter
+     * and deletes the todo item from the database
      * 
      * @param id The id of the todo item to delete
      */
